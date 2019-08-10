@@ -83,15 +83,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-SEND_ACTIVATION_EMAIL = True
-ACCOUNT_ACTIVATION_DAYS = 30
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'bodhafoundation@gmail.com'
-EMAIL_HOST_PASSWORD = 'weareateam'
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
