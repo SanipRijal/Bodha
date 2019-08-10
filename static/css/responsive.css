@@ -1,0 +1,82 @@
+@media screen and (max-width: 1024px) {
+	.ban-text {
+	    padding-top: 100px;
+	}
+
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+	img.ban-pos {
+	    width: 380px;
+	}
+
+	.ban-text h3 {
+		font-size: 38px;
+	}
+
+	.ban-text p {
+		font-size: 14px;
+		line-height: 24px;
+	}
+
+	.tech-sing {
+	    margin: 15px 0;
+	}
+
+	.scroll-navs .navbar-default .navbar-nav > li > a {
+		padding: 15px 10px;
+	}
+
+
+}
+
+
+@media (min-width: 768px) {
+	.navbar-nav {
+	    float: right;
+	    margin: 0;
+	}
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+.logo {
+    margin-top: 15px;
+}
+
+.ban-img {
+    margin-top: 30px;
+}
+
+.all-head p {
+	padding: 0;
+}
+
+.scroll-navs .navbar-default .navbar-nav > li > a {
+    text-align: right;
+    padding-right: 35px;
+}
+
+
+.scroll-navs ul.dropdown-menu {
+    background-image: none;
+    border-bottom: 1px solid #ccc !important;
+    max-width: 100% !important;
+}
+
+.scroll-navs {
+    margin-top: 20px;
+}
+
+.navbar-default .navbar-toggle {
+    border: none;
+}
+
+
+}
+

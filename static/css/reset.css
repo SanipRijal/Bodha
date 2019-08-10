@@ -1,0 +1,67 @@
+* {
+	outline: none;
+}
+
+.p50 {
+	padding: 50px 0;
+}
+
+.p20 {
+	padding: 20px 0;
+}
+
+.p25 {
+	padding: 25px 0;
+}
+
+.txt-right  {
+    text-align: right;
+}
+
+i.fas.fa-phone {
+    transform: rotate(90deg);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+
+#top-button {
+  display: inline-block;
+  background-color: #005d96;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#top-button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#top-button:hover {
+  cursor: pointer;
+  background-color: #00a651;
+}
+#top-button:active {
+  background-color: #555;
+}
+#top-button.show {
+  opacity: 1;
+  visibility: visible;
+}
