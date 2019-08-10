@@ -1,8 +1,9 @@
 from django.contrib import admin
 from .models import Subscribe, Event, EventImage, EventVideo, OurCause, OurReach, BannerImage
+from image_cropping.admin import ImageCroppingMixin
 
 
-class EventImageInline(admin.TabularInline):
+class EventImageInline(ImageCroppingMixin, admin.TabularInline):
     model = EventImage
 
 
@@ -15,7 +16,13 @@ class EventAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Event, EventAdmin)
-admin.site.register(BannerImage)
+
+
+class BannerCropAdmin(ImageCroppingMixin, admin.ModelAdmin):
+    pass
+
+
+admin.site.register(BannerImage, BannerCropAdmin)
 admin.site.register(Subscribe)
 admin.site.register(OurReach)
 admin.site.register(OurCause)

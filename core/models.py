@@ -1,4 +1,5 @@
 from django.db import models
+from image_cropping import ImageRatioField
 
 
 class Subscribe(models.Model):
@@ -31,6 +32,7 @@ class Event(models.Model):
 class EventImage(models.Model):
     event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='images')
     image = models.ImageField(upload_to='events/images')
+    listing = ImageRatioField('image', '520x292')
 
     def __str__(self):
         return self.event.title
@@ -62,5 +64,6 @@ class OurReach(models.Model):
 
 class BannerImage(models.Model):
     image = models.ImageField(upload_to='banner/')
+    cropping = ImageRatioField('image', '555x505')
 
 

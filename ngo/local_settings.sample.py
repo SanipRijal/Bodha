@@ -19,6 +19,8 @@ DATABASES = {
     }
 }
 
+
+
 SEND_ACTIVATION_EMAIL = True
 ACCOUNT_ACTIVATION_DAYS = 30
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

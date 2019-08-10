@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load cropping %}
 <html lang="en">
 
 <head>
@@ -119,7 +120,7 @@
                     <div class="banner-car owl-carousel">
                         {% for item in banner %}
                         <div class="item">
-                            <img style="width:555px; height:505px;" src="{{ item.image.url }}">
+                            <img src='{% cropped_thumbnail item "cropping" %}'>
                         </div>
 
                         {% endfor %}
@@ -211,7 +212,7 @@
                 <div class="item">
                     <div class="ev-sing">
                         <div class="ev-img">
-                            <img style="width:520px; height:292px;" src="{{ item.images.first.image.url }}">
+                            <img src='{% cropped_thumbnail item.images.first "listing" %}'>
 
 
                             <div class="eve-com">
@@ -232,48 +233,6 @@
                     </div>
                 </div>
                 {% endfor %}
-
-                <div class="item">
-                    <div class="ev-sing">
-                        <div class="ev-img">
-                            <img src="{% static 'images/ev.jpg' %}">
-                        </div>
-
-                        <div class="ev-text">
-                            <h4>Charity for education</h4>
-                            <p>Helping Hands Community Hospital is a recently established non profit making, charitable 100 bedded community hospital located in Chabahil, Kathmandu .</p>
-
-                            <div class="ev-btns">
-                                <button class="bt-g">Donate</button>
-                                <button class="bt-b">View</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="ev-sing">
-                        <div class="ev-img">
-                            <img src="{% static 'images/ev.jpg' %}">
-
-                            <div class="eve-com">
-                                <p class="upcoming">Upcoming Event</p>
-                            </div>
-                        </div>
-
-                        <div class="ev-text">
-                            <h4>Charity for education</h4>
-                            <p>Helping Hands Community Hospital is a recently established non profit making, charitable 100 bedded community hospital located in Chabahil, Kathmandu .</p>
-
-                            <div class="ev-btns">
-                                <button class="bt-g">Donate</button>
-                                <button class="bt-b">View</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
             </div>
 
         </div>
@@ -293,17 +252,6 @@
                     <li><img src="{% static 'images/sp3.png' %}"></li>
                     <li><img src="{% static 'images/sp4.png' %}"></li>
                     <li><img src="{% static 'images/sp5.png' %}"></li>
-                    <li><img src="{% static 'images/sp5.png' %}"></li>
-                    <li><img src="{% static 'images/sp2.png' %}"></li>
-                    <li><img src="{% static 'images/sp4.png' %}"></li>
-                    <li><img src="{% static 'images/sp2.png' %}"></li>
-                    <li><img src="{% static 'images/sp1.png' %}"></li>
-                    <li><img src="{% static 'images/sp5.png' %}"></li>
-                    <li><img src="{% static 'images/sp5.png' %}"></li>
-                    <li><img src="{% static 'images/sp2.png' %}"></li>
-                    <li><img src="{% static 'images/sp4.png' %}"></li>
-                    <li><img src="{% static 'images/sp2.png' %}"></li>
-                    <li><img src="{% static 'images/sp1.png' %}"></li>
                 </ul>
             </div>
     </section>
