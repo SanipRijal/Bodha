@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Subscribe, Event, EventImage, EventVideo, OurCause, OurReach, BannerImage
+from .models import Subscribe, Event, EventImage, EventVideo, OurCause, OurReach, BannerImage, CauseContent, \
+    RequestITTrainingContent, PartnersAndSponsorContent, PartnersAndSponsor
 from image_cropping.admin import ImageCroppingMixin
 
 
@@ -25,5 +26,8 @@ class BannerCropAdmin(ImageCroppingMixin, admin.ModelAdmin):
 admin.site.register(BannerImage, BannerCropAdmin)
 admin.site.register(Subscribe)
 admin.site.register(OurReach)
-admin.site.register(OurCause)
+admin.site.register(CauseContent)
+admin.site.register(RequestITTrainingContent)
+admin.site.register(PartnersAndSponsor)
+admin.site.register(PartnersAndSponsorContent)
 
