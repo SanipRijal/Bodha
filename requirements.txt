@@ -1,4 +1,4 @@
-Django==2.2.3
+Django==2.2.4
 django-appconf==1.0.3
 django-image-cropping==1.2.0
 easy-thumbnails==2.6
