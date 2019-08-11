@@ -26,6 +26,7 @@ class BannerCropAdmin(ImageCroppingMixin, admin.ModelAdmin):
 admin.site.register(BannerImage, BannerCropAdmin)
 admin.site.register(Subscribe)
 admin.site.register(OurReach)
+admin.site.register(OurCause)
 admin.site.register(CauseContent)
 admin.site.register(RequestITTrainingContent)
 admin.site.register(PartnersAndSponsor)
