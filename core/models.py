@@ -67,3 +67,23 @@ class BannerImage(models.Model):
     cropping = ImageRatioField('image', '555x505')
 
 
+class CauseContent(models.Model):
+    text = models.TextField()
+
+
+class PartnersAndSponsor(models.Model):
+    name = models.CharField(max_length=100)
+    logo = models.ImageField(upload_to='partners/')
+
+    def __str__(self):
+        return self.name
+
+
+class RequestITTrainingContent(models.Model):
+    text = models.TextField()
+
+
+class PartnersAndSponsorContent(models.Model):
+    text = models.TextField()
+
+

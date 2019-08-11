@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, CreateView, DetailView, ListView, FormView
 from .forms import SubscribeForm
-from .models import Subscribe, Header, OurCause, OurReach, Event, BannerImage
+from .models import Subscribe, Header, OurCause, OurReach, Event, BannerImage, CauseContent, PartnersAndSponsor,\
+    PartnersAndSponsorContent, RequestITTrainingContent
 from django.template.loader import render_to_string
 from django.core.mail import EmailMessage
 
@@ -20,6 +21,10 @@ class IndexView(FormView):
         context['event'] = Event.objects.all()
         context['form'] = SubscribeForm()
         context['banner'] = BannerImage.objects.all()
+        context['cause_content'] = CauseContent.objects.first()
+        context['partners'] = PartnersAndSponsor.objects.all()
+        context['partners_content'] = PartnersAndSponsorContent.objects.first()
+        context['training'] = RequestITTrainingContent.objects.first()
         return context
 
     def form_valid(self, form):

@@ -107,7 +107,7 @@
                     <div class="ban-text">
                         <h3>Educate Through <span>IT</span></h3>
                         <p>
-                            Helping Hands Community Hospital is a recently established non profit making, charitable 100 bedded community hospital located in Chabahil, Kathmandu . This hospital is established under the umbrella of Helping Hands Nepal which is a non governmental Organization registered in 1989 . In the beginning ,it runs free health camps in different rural areas.
+                            {{ header.description }}
                         </p>
                         
                         <button class="don-btn">Donate Now</button>
@@ -139,7 +139,7 @@
             
             <div class="all-head">
                 <h3>our causes</h3>
-                <p>Helping Hands Community Hospital is a recently established non profit making, charitable 100 bedded community hospital located in Chabahil, Kathmandu . </p>
+                <p>{{ cause_content.text }}</p>
             </div>
 
             <div class="row">
@@ -242,16 +242,14 @@
         
             <div class="all-head">
                 <h3>Partners & Sponsers</h3>
-                <p>Helping Hands Community Hospital is a recently established non profit making, charitable 100 bedded community hospital located in Chabahil, Kathmandu . </p>
+                <p>{{ partners_content.text }}</p>
             </div>
 
             <div class="partners-img">
                 <ul>
-                    <li><img src="{% static 'images/sp1.png' %}"></li>
-                    <li><img src="{% static 'images/sp2.png' %}"></li>
-                    <li><img src="{% static 'images/sp3.png' %}"></li>
-                    <li><img src="{% static 'images/sp4.png' %}"></li>
-                    <li><img src="{% static 'images/sp5.png' %}"></li>
+                    {% for item in partners %}
+                        <li><img src="{{ item.logo.url }}" alt="item.name"></li>
+                    {% endfor %}
                 </ul>
             </div>
     </section>
@@ -260,7 +258,7 @@
         <div class="container">
             <div class="all-head">
                 <h3>Request IT Training</h3>
-                <p>Helping Hands Community Hospital is a recently established non profit making, charitable 100 bedded community hospital located in Chabahil, Kathmandu . </p>
+                <p>{{ training.text }}</p>
             </div>
 
             <div class="row">
