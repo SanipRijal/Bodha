@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Subscribe, Event, EventImage, EventVideo, OurCause, OurReach, BannerImage, CauseContent, \
-    RequestITTrainingContent, PartnersAndSponsorContent, PartnersAndSponsor
+    RequestITTrainingContent, PartnersAndSponsorContent, PartnersAndSponsor, Header
 from image_cropping.admin import ImageCroppingMixin
 
 
@@ -31,4 +31,6 @@ admin.site.register(CauseContent)
 admin.site.register(RequestITTrainingContent)
 admin.site.register(PartnersAndSponsor)
 admin.site.register(PartnersAndSponsorContent)
+admin.site.register(Header)
+
 
